@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/eureka-server-7000/eureka-server-7000.iml" filepath="$PROJECT_DIR$/eureka-server-7000/eureka-server-7000.iml" />
+      <module fileurl="file://$PROJECT_DIR$/forum-account-service/forum-account-service.iml" filepath="$PROJECT_DIR$/forum-account-service/forum-account-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/forum-api/forum-api.iml" filepath="$PROJECT_DIR$/forum-api/forum-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/forum-view/forum-view.iml" filepath="$PROJECT_DIR$/forum-view/forum-view.iml" />
+      <module fileurl="file://$PROJECT_DIR$/forum-zhuoyue.iml" filepath="$PROJECT_DIR$/forum-zhuoyue.iml" />
+    </modules>
+  </component>
+</project>
