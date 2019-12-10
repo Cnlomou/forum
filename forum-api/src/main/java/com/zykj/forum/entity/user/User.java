@@ -1,4 +1,4 @@
-package com.zykj.forum.entity.account;
+package com.zykj.forum.entity.user;
 
 
 import lombok.AllArgsConstructor;
@@ -15,7 +15,6 @@ import java.util.Date;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@ToString
 public class User implements Serializable {
     @Id
     @GeneratedValue
@@ -32,4 +31,10 @@ public class User implements Serializable {
     private String address;
     @Column(name = "uemail",columnDefinition = "varchar")
     private String email;
+    @Column(name = "upicurl",columnDefinition = "varchar")
+    private String picUrl;
+    @Column(name = "ucreate_at",columnDefinition = "timestamp")
+    private Date createTime;
+    @Column(name = "ulastaccess_at",columnDefinition = "timestamp")
+    private Date lastAccessTime;
 }

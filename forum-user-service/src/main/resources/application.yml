@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: user-service
+  profiles:
+    active: dev
+eureka:
+  instance:
+    appname: user-service
+    prefer-ip-address: true
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:7000/eureka
+server:
+  port: 8001

@@ -1,5 +1,6 @@
 package com.zykj.forum.entity.account;
 
+import com.zykj.forum.entity.user.User;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
