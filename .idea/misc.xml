@@ -4,10 +4,7 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/eureka-server-7000/pom.xml" />
-        <option value="$PROJECT_DIR$/forum-view/pom.xml" />
         <option value="$PROJECT_DIR$/forum-api/pom.xml" />
-        <option value="$PROJECT_DIR$/forum-account-service/pom.xml" />
       </list>
     </option>
   </component>
