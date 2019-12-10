@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <title>某某论坛</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/semantic-ui/2.4.1/semantic.min.css">
+    <link rel="stylesheet" href="../static/css/me.css">
+</head>
+<body>
+
+<!--导航条-->
+<nav class="ui attached red segment m-padded-tb-mini m-shadow-small">
+    <div class="ui stackable container">
+        <div class="ui stackable secondary menu">
+            <h2 class="ui red header item m-mobile-show">某某论坛</h2>
+            <a href="#" class="ui item">
+                <img src="../static/images/qiku_community_logo.png" alt="" class="ui image m-mobile-hide">
+            </a>
+            <a href="#" class="m-item item m-mobile-hide"><i class="home icon"></i>帖子</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class="bookmark icon"></i>论坛</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class="th icon"></i>版块</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class="flag outline icon"></i>活动</a>
+            <a href="#" class="active teal  m-item item m-mobile-hide"><i class="question circle icon"></i>个人信息</a>
+            <div class="right m-item menu m-mobile-hide">
+                <div class="ui action left input item">
+                    <input type="text" placeholder="搜索帖子...">
+                    <div class="ui animated button fade">
+                        <div class="visible content">搜索</div>
+                        <div class="hidden content">
+                            <i class="search icon"></i>
+                        </div>
+                    </div>
+                </div>
+                <div id="userButton" class="item">
+                    <img src="../static/images/user.png" alt="" class="ui avatar image">
+                    <i class="list ul icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#" class="ui menu toggle icon button m-right-top m-mobile-show">
+        <i class="sidebar icon"></i>
+    </a>
+</nav>
+
+<!--个人信息-->
+<div class="ui userInfo flowing popup transition hidden">
+    <div>
+        <div style="width: 250px">
+            <h3>卓越科技</h3>
+            粉丝数：<span>0</span>
+            <div class="ui divider"></div>
+            <a href="">●私信</a>
+            <a href="">●消息</a>
+            <a href="">●个人资料</a>
+            <br>
+            <div class="ui mini teal button">
+                退出
+            </div>
+            <div class="ui mini button">
+                设置
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--中间内容-->
+<div class="ui container m-padded-tb-big">
+    <div class="ui breadcrumb">
+        <a class="section"><i class="home icon"></i></a>
+        <i class="right angle icon divider"></i>
+        <a class="section">卓越科技</a>
+        <i class="right angle icon divider"></i>
+        <div class="active section">个人资料</div>
+    </div>
+    <div class="ui segment">
+        <div class="ui items">
+            <div class="item">
+                <img src="../static/images/rachel.png" class="ui circular image" style="height: 50px;width: 50px">
+                <div class="ui two column m-margin-lr">
+                    <h4 class="ui center aligned header">卓越科技</h4>
+                    <div class="ui link list">
+                        <a href="#" class="item">https://hao.360.com/</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ui pointing secondary menu">
+            <a class="item active" data-tab="first">主页</a>
+            <a class="item" data-tab="second">帖子</a>
+            <div class="right menu">
+                <a class="ui item">
+                    退出
+                </a>
+            </div>
+        </div>
+        <div class="ui tab segment active" data-tab="first">
+            <h5><span>卓越科技</span>(UID:<span>26581781</span>)</h5>
+            <div>统计信息： <a href="#">关注数 <span>0</span></a> | <a href="#">帖子数 <span>0</span></a> | <a href="#">回复数
+                <span>0</span></a></div>
+        </div>
+        <div class="ui tab segment" data-tab="second">
+            <div class="ui two column grid">
+                <div class="ui column">
+                    <a href="#">帖子</a>
+                    <span class="divider">|</span>
+                    <a href="#">回复</a>
+                </div>
+            </div>
+            <div class="ui divider"></div>
+            <div class="ui grid">
+                <div class="eight wide column">
+                    <h5 class="ui center aligned header" style="font-weight: 400">帖子</h5>
+                </div>
+                <div class="two wide column">
+                    版块
+                </div>
+                <div class="three wide column">
+                    观看/回复
+                </div>
+                <div class="three wide column">
+                    发帖时间
+                </div>
+            </div>
+            <div class="ui grid">
+                <div class="eight wide column">
+                    <h3><i class="sticky note outline icon"></i>新版文件管理</h3>
+                </div>
+                <div class="two wide column">
+                    <a href="#">360动态</a>
+                </div>
+                <div class="three wide column">
+                    <i class="eye icon"></i><span>50</span>
+                    <i class="comment icon"></i> <span>5000</span>
+                </div>
+                <div class="three wide column">
+                    <i class="calendar icon"></i> 2019-08-07
+                </div>
+            </div>
+            <div class="ui grid">
+                <div class="eight wide column">
+                    <h3><i class="sticky note outline icon"></i>新版文件管理</h3>
+                </div>
+                <div class="two wide column">
+                    <a href="#">360动态</a>
+                </div>
+                <div class="three wide column">
+                    <i class="eye icon"></i><span>50</span>
+                    <i class="comment icon"></i> <span>5000</span>
+                </div>
+                <div class="three wide column">
+                    <i class="calendar icon"></i> 2019-08-07
+                </div>
+            </div>
+            <div class="ui grid">
+                <div class="eight wide column">
+                    <h3><i class="sticky note outline icon"></i>新版文件管理</h3>
+                </div>
+                <div class="two wide column">
+                    <a href="#">360动态</a>
+                </div>
+                <div class="three wide column">
+                    <i class="eye icon"></i><span>50</span>
+                    <i class="comment icon"></i> <span>5000</span>
+                </div>
+                <div class="three wide column">
+                    <i class="calendar icon"></i> 2019-08-07
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--尾部内容-->
+<footer class="ui inverted vertical segment m-padded-tb-big">
+    <div class="ui center aligned container">
+        <p class="m-text-spaced m-text-thin m-opacity-tiny">Copyright © 2019 - 2020 论坛</p>
+    </div>
+</footer>
+
+<script src="../static/js/jquery-3.4.1.min.js"></script>
+<script src="../static/semantic-ui/2.4.1/semantic.min.js"></script>
+
+<script>
+
+    $('.menu .item')
+        .tab()
+    ;
+
+
+    $('.menu.toggle').click(function () {
+        $('.m-item').toggleClass('m-mobile-hide');
+
+    });
+
+    $('#userButton').popup({
+        popup: $('.userInfo.popup'),
+        on: 'click',
+        position: 'bottom center'
+    });
+
+
+</script>
+
+</body>
+</html>

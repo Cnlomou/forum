@@ -1,10 +1,9 @@
 package com.example;
 
 import com.zykj.forum.ForumAccountServiceApplication;
-import com.zykj.forum.entity.account.User;
+import com.zykj.forum.entity.user.User;
 import com.zykj.forum.repository.AccountRepository;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import javax.annotation.Resource;
