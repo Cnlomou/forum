@@ -18,10 +18,6 @@ class ForumAccountServiceApplicationTests {
         User user = new User();
         user.setName("卓越科技");
         user.setRealName("孙俊华");
-        User save = accountRepository.save(user);
-        System.out.println(save);
-        List<User> all = accountRepository.findAll();
-        System.out.println(all);
     }
 
 }

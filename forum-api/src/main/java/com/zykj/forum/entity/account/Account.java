@@ -2,25 +2,29 @@ package com.zykj.forum.entity.account;
 
 import com.zykj.forum.entity.user.User;
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
-
 import javax.persistence.*;
 
 @Table(name = "tb_account")
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@ToString
+@Data
 public class Account {
     @Id
     @GeneratedValue
     private Long id;
     @Column(name = "aacc",columnDefinition = "varchar",length = 32)
     private String account;
-    @Column(name = "apword",columnDefinition = "varchar",length = 16)
+    @Column(name = "apword",columnDefinition = "varchar")
     private String password;
+    @Column(name = "asalt",columnDefinition = "varchar")
+    private String salt;
     @OneToOne(targetEntity = User.class,cascade = CascadeType.ALL)
     @JoinColumn(name = "u_id",referencedColumnName = "id")
     private User user;
+    @Column(name = "aphone",columnDefinition = "bool")
+    private Boolean isPhone;
 }
