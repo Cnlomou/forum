@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    username: h2
+    password: 123456
+    url: jdbc:h2:file:${h2.database.path}/forum-account
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+  profiles: dev
+h2:
+  database:
+    path: D:/h2database
