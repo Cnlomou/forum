@@ -6,11 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="forumapi" />
-        <module name="forumaccountservice" />
-        <module name="forum-api" />
-        <module name="forumview" />
         <module name="eurekaserver7000" />
+        <module name="forumaccountservice" />
+        <module name="forumapi" />
+        <module name="forumview" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
