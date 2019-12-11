@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: forum-commons
+  mail:
+    host: smtp.163.com
+    password: zykj123456
+    username: zykjforum@163.com
+    properties:
+      mail.ssl.enable: true
+    jndi-name: zykj
+eureka:
+  instance:
+    appname: forum-commons
+    prefer-ip-address: true
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:7000/eureka
+server:
+  port: 8002

@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/forum-zhuoyue.iml" filepath="$PROJECT_DIR$/forum-zhuoyue.iml" />
       <module fileurl="file://$PROJECT_DIR$/forum-account-service/forumaccountservice.iml" filepath="$PROJECT_DIR$/forum-account-service/forumaccountservice.iml" />
       <module fileurl="file://$PROJECT_DIR$/forum-api/forumapi.iml" filepath="$PROJECT_DIR$/forum-api/forumapi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/forum-commons/forumcommons.iml" filepath="$PROJECT_DIR$/forum-commons/forumcommons.iml" />
       <module fileurl="file://$PROJECT_DIR$/forum-view/forumview.iml" filepath="$PROJECT_DIR$/forum-view/forumview.iml" />
     </modules>
   </component>

@@ -6,11 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="forum-user-service" />
+        <module name="forumapi" />
+        <module name="forumcommons" />
+        <module name="forumaccountservice" />
         <module name="forumview" />
         <module name="eurekaserver7000" />
-        <module name="forumaccountservice" />
-        <module name="forumapi" />
-        <module name="forum-user-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
@@ -23,6 +24,7 @@
       <module name="forum-zhuoyue" target="1.8" />
       <module name="forumaccountservice" target="1.8" />
       <module name="forumapi" target="1.8" />
+      <module name="forumcommons" target="1.8" />
       <module name="forumview" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -37,6 +39,7 @@
       <module name="forum-zhuoyue" options="-parameters" />
       <module name="forumaccountservice" options="-parameters" />
       <module name="forumapi" options="-parameters" />
+      <module name="forumcommons" options="-parameters" />
       <module name="forumview" options="-parameters" />
     </option>
   </component>
