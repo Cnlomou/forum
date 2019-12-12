@@ -6,6 +6,7 @@ import com.zykj.forum.entity.RestResult;
 import com.zykj.forum.entity.account.Account;
 import com.zykj.forum.service.AccountService;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 import javax.validation.Valid;
@@ -29,7 +30,7 @@ public class AccountController {
         return  restResult;
     }
 
-    @GetMapping("/signup")
+    @PostMapping("/signup")
     public RestResult doSiggUp(@Valid SignUpDto signUpDto){
         Account account = accountService.singUp(signUpDto);
         RestResult restResult = new RestResult();
@@ -41,7 +42,7 @@ public class AccountController {
         return restResult;
     }
 
-    @GetMapping("/updatepassword")
+    @PostMapping("/updatepassword")
     public RestResult doUpdatePassword(@NotBlank String account ,@NotBlank String password,@NotBlank String newpassword, Integer type){
         Account account1 = accountService.updatePassword(account, password, newpassword, type == 0);
         RestResult restResult = new RestResult();
@@ -52,7 +53,7 @@ public class AccountController {
         restResult.setMsg(account1);
         return restResult;
     }
-    @GetMapping("/signin")
+    @PostMapping("/signin")
     public RestResult doSingin(@Valid SigninDto signinDto){
         RestResult restResult = new RestResult();
         if(accountService.signin(signinDto))

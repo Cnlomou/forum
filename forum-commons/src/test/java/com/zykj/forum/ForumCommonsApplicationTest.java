@@ -5,6 +5,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.mail.javamail.MimeMailMessage;
+import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.Resource;
 import javax.mail.MessagingException;
@@ -23,5 +24,10 @@ public class ForumCommonsApplicationTest {
         mimeMailMessage.setTo("1246269795@qq.com");
         mimeMailMessage.getMimeMessageHelper().setText("<font color='red'>ssssadf</font>",true);
         javaMailSender.send(mimeMailMessage.getMimeMessageHelper().getMimeMessage());
+    }
+
+    @Test
+    void testRestTemplate(){
+        RestTemplate restTemplate;
     }
 }
