@@ -1,8 +1,8 @@
 package com.zykj.forum.controller;
 
 import com.zykj.forum.dto.UserInfo;
-import com.zykj.forum.entity.RestResult;
-import com.zykj.forum.entity.user.User;
+import com.zykj.forum.RestResult;
+import com.zykj.forum.entity.User;
 import com.zykj.forum.service.UserService;
 import org.springframework.web.bind.annotation.*;
 

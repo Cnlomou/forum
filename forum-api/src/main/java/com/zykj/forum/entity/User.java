@@ -1,4 +1,4 @@
-package com.zykj.forum.entity.user;
+package com.zykj.forum.entity;
 
 
 import lombok.AllArgsConstructor;
@@ -9,6 +9,7 @@ import lombok.ToString;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "tb_user")
@@ -37,4 +38,13 @@ public class User implements Serializable {
     private Date createTime;
     @Column(name = "ulastaccess_at",columnDefinition = "timestamp")
     private Date lastAccessTime;
+
+    @OneToOne(fetch = FetchType.LAZY)
+    private Account account;
+
+    @OneToMany(fetch = FetchType.LAZY)
+    private List<Comment> comments;
+
+    @OneToMany(fetch = FetchType.LAZY)
+    private List<Posts> posts;
 }

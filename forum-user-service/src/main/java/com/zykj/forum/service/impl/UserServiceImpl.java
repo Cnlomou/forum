@@ -1,7 +1,7 @@
 package com.zykj.forum.service.impl;
 
 import com.zykj.forum.dto.UserInfo;
-import com.zykj.forum.entity.user.User;
+import com.zykj.forum.entity.User;
 import com.zykj.forum.respository.UserRepository;
 import com.zykj.forum.service.UserService;
 import org.springframework.stereotype.Service;
@@ -23,7 +23,10 @@ public class UserServiceImpl implements UserService {
     public User createUser(UserInfo userInfo) throws ParseException {
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-mm-DD");
         Date parseDate = dateFormat.parse(userInfo.getDate());
-        return userRepository.save(new User(userInfo.getId(),userInfo.getName(),userInfo.getRealName(),userInfo.getPhone(),parseDate,userInfo.getAddress(),userInfo.getEmail(),"https://zijieke.com/semantic-ui/images/avatar2/large/kristy.png",new Date(),new Date()));
+        final User user = new User(userInfo.getId(), userInfo.getName(), userInfo.getRealName(), userInfo.getPhone(),
+                parseDate, userInfo.getAddress(), userInfo.getEmail(), "https://zijieke.com/semantic-ui/images/avatar2/large/kristy.png",
+                new Date(), new Date(), null, null, null);
+        return userRepository.save(user);
     }
 
     @Transactional

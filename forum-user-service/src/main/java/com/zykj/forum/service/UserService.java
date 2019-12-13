@@ -1,7 +1,7 @@
 package com.zykj.forum.service;
 
 import com.zykj.forum.dto.UserInfo;
-import com.zykj.forum.entity.user.User;
+import com.zykj.forum.entity.User;
 
 import java.text.ParseException;
 

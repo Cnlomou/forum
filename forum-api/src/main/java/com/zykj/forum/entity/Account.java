@@ -1,10 +1,10 @@
-package com.zykj.forum.entity.account;
+package com.zykj.forum.entity;
 
-import com.zykj.forum.entity.user.User;
+import com.zykj.forum.entity.User;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.ToString;
+
 import javax.persistence.*;
 
 @Table(name = "tb_account")

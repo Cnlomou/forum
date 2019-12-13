@@ -2,8 +2,8 @@ package com.zykj.forum.controller;
 
 import com.zykj.forum.dto.SignUpDto;
 import com.zykj.forum.dto.SigninDto;
-import com.zykj.forum.entity.RestResult;
-import com.zykj.forum.entity.account.Account;
+import com.zykj.forum.RestResult;
+import com.zykj.forum.entity.Account;
 import com.zykj.forum.service.AccountService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;

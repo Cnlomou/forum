@@ -2,7 +2,7 @@ package com.zykj.forum.service;
 
 import com.zykj.forum.dto.SignUpDto;
 import com.zykj.forum.dto.SigninDto;
-import com.zykj.forum.entity.account.Account;
+import com.zykj.forum.entity.Account;
 import com.zykj.forum.repository.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

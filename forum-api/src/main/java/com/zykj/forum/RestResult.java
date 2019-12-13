@@ -1,4 +1,4 @@
-package com.zykj.forum.entity;
+package com.zykj.forum;
 
 import lombok.Data;
 

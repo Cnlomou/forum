@@ -1,6 +1,6 @@
 package com.zykj.forum.respository;
 
-import com.zykj.forum.entity.user.User;
+import com.zykj.forum.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;

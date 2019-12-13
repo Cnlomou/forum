@@ -1,12 +1,11 @@
 package com.zykj.forum;
 
-import com.zykj.forum.entity.user.User;
+import com.zykj.forum.entity.User;
 import com.zykj.forum.service.UserService;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import javax.annotation.Resource;
-import java.util.Date;
 
 @SpringBootTest(classes = ForumUserApplication.class)
 public class ForumUserApplicationTests {
