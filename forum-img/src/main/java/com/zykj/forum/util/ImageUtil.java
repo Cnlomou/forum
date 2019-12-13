@@ -2,7 +2,6 @@ package com.zykj.forum.util;
 
 import org.apache.tomcat.util.buf.HexUtils;
 
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -27,7 +26,7 @@ public class ImageUtil {
                 return null;
         }
     }
-    public static void imageCpy(OutputStream outputStream, InputStream inputStream, ImageUtil.ImageType imageType) throws IOException {
+    public static void imageCpy(OutputStream outputStream, InputStream inputStream, ImageType imageType) throws IOException {
         byte[] bytes=new byte[1024];
         int res=0;
         try {

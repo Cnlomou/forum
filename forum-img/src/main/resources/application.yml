@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: forum-img
+eureka:
+  instance:
+    appname: forum-img
+    prefer-ip-address: true
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:7000/eureka
+server:
+  port: 8003

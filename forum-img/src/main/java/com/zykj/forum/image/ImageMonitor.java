@@ -2,9 +2,6 @@ package com.zykj.forum.image;
 
 import com.zykj.forum.util.ImageUtil;
 
-import javax.activation.MimetypesFileTypeMap;
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.io.InputStream;
 

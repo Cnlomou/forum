@@ -9,6 +9,7 @@
         <module>forum-view</module>
         <module>forum-user-service</module>
         <module>forum-commons</module>
+        <module>forum-img</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

@@ -25,10 +25,7 @@ public class EmailController {
 
     @GetMapping("/sendmail")
     public String sendMail(String[] to,Long code) throws MessagingException {
-        if(eamilService.sendMail(code.toString(),to))
+            eamilService.sendMail(code.toString(),to);
             return "ok";
-        return "no";
     }
-
-
 }

@@ -3,6 +3,7 @@ package com.zykj.forum.service;
 import com.zykj.forum.service.eamil.EmailVerityService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 
@@ -19,10 +20,11 @@ public class EamilService {
     @Value("${spring.mail.username}")
     String from;
 
-    public boolean sendMail(String code ,String[] to) throws MessagingException {
+    @Async  //异步任务
+    public void sendMail(String code ,String[] to) throws MessagingException {
         getEmailSender().sendMimeMessage(code,to);
-        return true;
     }
+
     private synchronized EmailSend getEmailSender(){
         Assert.notNull(this.javaMailSender,"javaMailSender must not null");
         if(this.emailSend==null)

@@ -10,6 +10,7 @@
         <module name="forum-user-service" />
         <module name="forumapi" />
         <module name="forumcommons" />
+        <module name="forumimg" />
         <module name="forum-commons" />
         <module name="forumview" />
         <module name="eurekaserver7000" />
@@ -27,6 +28,7 @@
       <module name="forumaccountservice" target="1.8" />
       <module name="forumapi" target="1.8" />
       <module name="forumcommons" target="1.8" />
+      <module name="forumimg" target="1.8" />
       <module name="forumview" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -43,6 +45,7 @@
       <module name="forumaccountservice" options="-parameters" />
       <module name="forumapi" options="-parameters" />
       <module name="forumcommons" options="-parameters" />
+      <module name="forumimg" options="-parameters" />
       <module name="forumview" options="-parameters" />
     </option>
   </component>
