@@ -1,13 +1,12 @@
 package com.zykj.forum.entity;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
-import java.util.List;
 
 @Entity
 @Table(name = "tb_comment")
@@ -26,10 +25,12 @@ public class Comment implements Serializable {
 
     @ManyToOne
     @JoinColumn(name = "uid",referencedColumnName = "id")
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private User user;
 
     @ManyToOne
     @JoinColumn(name = "pid",referencedColumnName = "id")
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private Posts posts;
 
 }

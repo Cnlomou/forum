@@ -38,13 +38,4 @@ public class User implements Serializable {
     private Date createTime;
     @Column(name = "ulastaccess_at",columnDefinition = "timestamp")
     private Date lastAccessTime;
-
-    @OneToOne(fetch = FetchType.LAZY)
-    private Account account;
-
-    @OneToMany(fetch = FetchType.LAZY)
-    private List<Comment> comments;
-
-    @OneToMany(fetch = FetchType.LAZY)
-    private List<Posts> posts;
 }

@@ -25,7 +25,7 @@ public class UserServiceImpl implements UserService {
         Date parseDate = dateFormat.parse(userInfo.getDate());
         final User user = new User(userInfo.getId(), userInfo.getName(), userInfo.getRealName(), userInfo.getPhone(),
                 parseDate, userInfo.getAddress(), userInfo.getEmail(), "https://zijieke.com/semantic-ui/images/avatar2/large/kristy.png",
-                new Date(), new Date(), null, null, null);
+                new Date(), new Date());
         return userRepository.save(user);
     }
 

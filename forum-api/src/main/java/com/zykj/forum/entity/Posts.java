@@ -31,8 +31,6 @@ public class Posts implements Serializable {
     @Column(name = "pupdate_time",columnDefinition = "timestamp")
     private Date update_at;
 
-    @OneToMany(fetch = FetchType.LAZY)
-    private List<Comment> comments;
 
     @ManyToOne
     @JoinColumn(name = "sid",referencedColumnName = "id")

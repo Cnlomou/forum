@@ -17,10 +17,7 @@ public class Plate implements Serializable {
     @Id
     @GeneratedValue
     private Long id;
-
     @Column(name = "pname",columnDefinition = "varchar",length = 64)
     private String plateName;
 
-    @OneToMany
-    private List<Subject> subjects;
 }

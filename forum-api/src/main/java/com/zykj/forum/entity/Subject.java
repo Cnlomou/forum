@@ -21,8 +21,7 @@ public class Subject  implements Serializable {
     private String ssbjectName;
     @Column(name = "spicurl",columnDefinition = "varchar")
     private String picUrl;
-    @OneToMany
-    private List<Posts> posts;
+
     @ManyToOne
     @JoinColumn(name = "pid",referencedColumnName = "id")
     private Plate plate;

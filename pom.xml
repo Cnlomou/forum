@@ -10,6 +10,8 @@
         <module>forum-user-service</module>
         <module>forum-commons</module>
         <module>forum-img</module>
+        <module>forum-posts</module>
+        <module>forum-comment</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -152,13 +154,26 @@
             </dependency>
     </dependencies>
 </dependencyManagement>
-<dependencies>
-    <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-devtools</artifactId>
-        <scope>runtime</scope>
-    </dependency>
-</dependencies>
+<!--    <dependencies>-->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-devtools</artifactId>-->
+<!--            <scope>runtime</scope>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-starter-web</artifactId>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-starter-data-jpa</artifactId>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <artifactId>forum-api</artifactId>-->
+<!--            <groupId>com.zykj.forum</groupId>-->
+<!--            <version>${project.version}</version>-->
+<!--        </dependency>-->
+<!--    </dependencies>-->
     <build>
         <plugins>
             <plugin>

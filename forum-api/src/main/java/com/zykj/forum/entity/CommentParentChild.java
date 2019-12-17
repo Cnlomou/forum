@@ -19,7 +19,7 @@ public class CommentParentChild {
     @JoinColumn(name = "pid",referencedColumnName = "id")
     private Comment parent;
 
-    @OneToOne(fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "cid",referencedColumnName = "id")
     private Comment child;
 }

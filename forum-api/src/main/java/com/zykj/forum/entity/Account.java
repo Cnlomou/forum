@@ -22,9 +22,11 @@ public class Account {
     private String password;
     @Column(name = "asalt",columnDefinition = "varchar")
     private String salt;
+
     @OneToOne(targetEntity = User.class,cascade = CascadeType.ALL)
-    @JoinColumn(name = "u_id",referencedColumnName = "id")
+    @JoinColumn(name = "uid",referencedColumnName = "id")
     private User user;
+
     @Column(name = "aphone",columnDefinition = "bool")
     private Boolean isPhone;
 }

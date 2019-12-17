@@ -10,9 +10,11 @@
         <module name="forum-user-service" />
         <module name="forumapi" />
         <module name="forumcommons" />
-        <module name="forumimg" />
         <module name="forum-commons" />
+        <module name="forumcomment" />
+        <module name="forumimg" />
         <module name="forumview" />
+        <module name="forumposts" />
         <module name="eurekaserver7000" />
       </profile>
     </annotationProcessing>
@@ -27,8 +29,10 @@
       <module name="forum-zhuoyue" target="1.8" />
       <module name="forumaccountservice" target="1.8" />
       <module name="forumapi" target="1.8" />
+      <module name="forumcomment" target="1.8" />
       <module name="forumcommons" target="1.8" />
       <module name="forumimg" target="1.8" />
+      <module name="forumposts" target="1.8" />
       <module name="forumview" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -44,8 +48,10 @@
       <module name="forum-zhuoyue" options="-parameters" />
       <module name="forumaccountservice" options="-parameters" />
       <module name="forumapi" options="-parameters" />
+      <module name="forumcomment" options="-parameters" />
       <module name="forumcommons" options="-parameters" />
       <module name="forumimg" options="-parameters" />
+      <module name="forumposts" options="-parameters" />
       <module name="forumview" options="-parameters" />
     </option>
   </component>
