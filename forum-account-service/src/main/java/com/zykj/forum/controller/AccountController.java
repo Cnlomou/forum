@@ -55,7 +55,7 @@ public class AccountController {
         Account account = accountService.singUp(signUpDto);
         RestResult restResult = new RestResult();
         if(account!=null&&account.getId()!=null)
-            restResult.setCode("ok");
+            restResult.setCode("okar");
         else
             restResult.setCode("no");
         restResult.setMsg(account);
