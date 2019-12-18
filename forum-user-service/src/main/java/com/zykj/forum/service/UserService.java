@@ -10,6 +10,8 @@ public interface UserService {
     //创建用户
     User createUser(UserInfo userInfo) throws ParseException;
 
+    User create(String email);
+
     //更新数据
     User updateData(UserInfo userInfo) throws ParseException;
 

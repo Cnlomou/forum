@@ -7,6 +7,11 @@ body {
     padding: 2em !important;
 }
 
+.m-padded-tb-none {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
 .m-padded-tb-mini {
     /*1em=12像素 由于semantic需要提升级别加 !important */
     padding-top: 0.2em !important;
@@ -39,22 +44,22 @@ body {
     padding-right: 1em !important;
 }
 
-m-padded-t-mini{
+.m-padded-t-mini {
     padding-top: 2em !important;
     padding-bottom: 0 !important;
 }
 
-.m-padded-t{
+.m-padded-t {
     padding-top: 2em !important;
     padding-bottom: 0 !important;
 }
 
-.m-padded-tb-bt{
+.m-padded-tb-bt {
     padding-top: 12px !important;
     padding-bottom: 0 !important;
 }
 
-.m-padded-t-mini{
+.m-padded-t-mini {
     padding-top: 0.5em !important;
     padding-bottom: 0 !important;
 }
@@ -183,20 +188,24 @@ m-padded-t-mini{
     }
 }
 
-
-@media only screen and (min-width: 992px) {
-    #sign-in {
-        width: 400px;
+    #image {
+        width: 50%;
         margin: 0;
     }
+
+#sign-in {
+    width: 400px;
+    margin: 0;
 }
+
 
 .ui.modal > .close {
     top: 0;
     right: 0;
     color: grey;
 }
-.extra:after{
+
+.extra:after {
     content: '';
     display: block;
     clear: both;

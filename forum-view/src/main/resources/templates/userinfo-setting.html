@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/semantic-ui/2.4.1/semantic.min.css">
     <link rel="stylesheet" href="../static/css/me.css">
+    <link rel="stylesheet" href="../static/css/cropper.min.css">
 </head>
 <body>
 
@@ -65,13 +66,40 @@
     </div>
 </div>
 
+<!--图片裁剪-->
+<div id="image" class="ui modal">
+    <i class="close icon"></i>
+    <div class="m-margin-top">
+        <label title="上传图片" for="chooseImg" class="ui primary button m-margin-lr">
+            <input type="file" accept="image/jpg,image/jpeg,image/png" name="file" id="chooseImg" class="hidden"
+                   style="display: none;"
+                   onchange="selectImg(this)">
+            选择图片
+        </label>
+        <div style="width: 100%;height: 320px;position: relative;padding: 5px 5px;">
+            <div style="width: 300px;height: 300px;position: absolute;left: 10px;border: solid 1px #ddd;">
+                <img id="tailoringImg">
+            </div>
+            <div style="display: inline-block;width: 150px;height: 300px;position: absolute;right: 35px;padding: 4px 14px;">
+                <p>图片预览：</p>
+                <div class="previewImg"
+                     style="margin-top: 10px;border: solid 1px #ddd;     width: 100px;height: 100px;overflow: hidden;"></div>
+                <div class="previewImg"
+                     style="border-radius: 100%;margin-top: 10px;border: solid 1px #ddd;    width: 100px;height: 100px;overflow: hidden;"></div>
+            </div>
+        </div>
+        <div class="actions" style="margin-bottom: 10px">
+            <button class="ui primary ok button" id="sureCut">确定</button>
+        </div>
+    </div>
+</div>
+
 <!--中间内容-->
 <div class="ui container m-padded-tb-big">
     <div class="ui breadcrumb">
         <a class="section"><i class="home icon"></i></a>
         <i class="right angle icon divider"></i>
         <div class="active section">个人资料</div>
-
     </div>
     <div class="ui segment">
         <div class="ui secondary pointing menu">
@@ -80,7 +108,8 @@
         </div>
         <div class="ui tab segment active" data-tab="first">
             <h5>当前我的头像</h5>
-            <img src="../static/images/rachel.png" class="ui circular image" style="height: 100px;width: 100px">
+            <img src="../static/images/rachel.png" id="finalImg" class="ui circular image"
+                 style="height: 100px;width: 100px">
             <h5>设置我的新头像</h5>
             <p>请选择一个新照片进行上传编辑。
                 头像保存后，您可能需要刷新一下本页面(按F5键)，才能查看最新的头像效果</p>
@@ -88,7 +117,7 @@
                 <div class="ui icon header">
                     <i class="file icon"></i>
                 </div>
-                <div class="ui primary button">添加图片</div>
+                <div id="model" class="ui primary button">添加图片</div>
             </div>
         </div>
         <div class="ui tab segment" data-tab="second">
@@ -116,6 +145,7 @@
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
                 <div class="field">
@@ -198,8 +228,61 @@
 
 <script src="../static/js/jquery-3.4.1.min.js"></script>
 <script src="../static/semantic-ui/2.4.1/semantic.min.js"></script>
+<script src="../static/js/cropper.min.js"></script>
 
 <script>
+    //图像上传
+    function selectImg(file) {
+        if (!file.files || !file.files[0]) {
+            return;
+        }
+        var reader = new FileReader();
+        reader.onload = function (evt) {
+            var replaceSrc = evt.target.result;
+            //更换cropper的图片
+            $('#tailoringImg').cropper('replace', replaceSrc, false);//默认false，适应高度，不失真
+        };
+        reader.readAsDataURL(file.files[0]);
+    }
+
+    //cropper图片裁剪
+    $('#tailoringImg').cropper({
+        aspectRatio: 1 / 1,//默认比例
+        preview: '.previewImg',//预览视图
+        guides: false,  //裁剪框的虚线(九宫格)
+        autoCropArea: 0.3,  //0-1之间的数值，定义自动剪裁区域的大小，默认0.8
+        movable: false, //是否允许移动图片
+        dragCrop: false,  //是否允许移除当前的剪裁框，并通过拖动来新建一个剪裁框区域
+        //movable: true,  //是否允许移动剪裁框
+        resizable: false,  //是否允许改变裁剪框的大小
+        zoomable: false,  //是否允许缩放图片大小
+        mouseWheelZoom: false,  //是否允许通过鼠标滚轮来缩放图片
+        touchDragZoom: true,  //是否允许通过触摸移动来缩放图片
+        rotatable: false,  //是否允许旋转图片
+        cropBoxResizable: false,
+        crop: function (e) {
+            // 输出结果数据裁剪图像。
+        }
+    });
+
+    //裁剪后的处理
+    $("#sureCut").on("click", function () {
+        if ($("#tailoringImg").attr("src") == null) {
+            return false;
+        } else {
+            var cas = $('#tailoringImg').cropper('getCroppedCanvas');//获取被裁剪后的canvas
+            var base64url = cas.toDataURL('image/png'); //转换为base64地址形式
+            $("#finalImg").prop("src", base64url);//显示为图片的形式
+
+        }
+    });
+
+    $('#model').click(function () {
+            $('.ui.modal')
+                .modal('setting', 'closable', false)
+                .modal('show')
+        }
+    );
 
     $('.menu .item')
         .tab()

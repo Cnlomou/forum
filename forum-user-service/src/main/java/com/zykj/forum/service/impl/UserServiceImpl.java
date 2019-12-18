@@ -10,10 +10,14 @@ import org.springframework.transaction.annotation.Transactional;
 import javax.annotation.Resource;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.Random;
 
 @Service
 public class UserServiceImpl implements UserService {
+
+    private static String picUrl = "https://zijieke.com/semantic-ui/images/avatar2/large/kristy.png";
 
     @Resource
     private UserRepository userRepository;
@@ -23,11 +27,16 @@ public class UserServiceImpl implements UserService {
     public User createUser(UserInfo userInfo) throws ParseException {
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-mm-DD");
         Date parseDate = dateFormat.parse(userInfo.getDate());
-        final User user = new User(userInfo.getId(), userInfo.getName(), userInfo.getRealName(), userInfo.getPhone(),
-                parseDate, userInfo.getAddress(), userInfo.getEmail(), "https://zijieke.com/semantic-ui/images/avatar2/large/kristy.png",
-                new Date(), new Date());
-        return userRepository.save(user);
+        return userRepository.save(new User(userInfo.getId(),userInfo.getName(),userInfo.getRealName(),userInfo.getPhone(),parseDate,userInfo.getAddress(),userInfo.getEmail(),picUrl,new Date(),new Date()));
     }
+
+    @Override
+    public User create(String email) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(2000,1,1);
+        return userRepository.save(new User(null,"zy_"+ new Random().nextInt(),null,null,calendar.getTime(),null,email,picUrl,new Date(),null));
+    }
+
 
     @Transactional
     @Override

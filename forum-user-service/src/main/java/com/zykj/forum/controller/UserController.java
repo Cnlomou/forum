@@ -29,6 +29,19 @@ public class UserController {
         return restResult;
     }
 
+    @PostMapping("/create")
+    public RestResult create(String email){
+        RestResult restResult = new RestResult();
+        User user = userService.create(email);
+        if (user == null)
+            restResult.setCode("no");
+        else{
+            restResult.setCode("ok");
+            restResult.setMsg(user);
+        }
+        return restResult;
+    }
+
     @PostMapping("/updateUser")
     public RestResult updateUser(@Valid UserInfo userInfo) throws ParseException {
         RestResult restResult = new RestResult();

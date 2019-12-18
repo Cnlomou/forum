@@ -2,7 +2,7 @@
 <html lang="zh-Hans">
 <head>
     <meta charset="UTF-8">
-    <title>某某论坛</title>
+    <title>卓越论坛</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/semantic-ui/2.4.1/semantic.min.css">
     <link rel="stylesheet" href="../static/css/me.css">
@@ -10,53 +10,53 @@
 <body>
 
 <!--导航条-->
-<nav class="ui attached red segment m-padded-tb-mini m-shadow-small">
+<nav class="ui attached blue segment m-padded-tb-none m-shadow-small">
     <div class="ui stackable container">
         <div class="ui stackable secondary menu">
-            <h2 class="ui red header item m-mobile-show">某某论坛</h2>
+            <h2 class="ui blue header item m-mobile-show">卓越论坛</h2>
             <a href="#" class="ui item m-mobile-hide">
-                <img src="../static/images/qiku_community_logo.png" alt="" class="ui image ">
+                <img src="../static/images/zyfourm.png" alt="" class="ui image">
             </a>
-            <a href="#" class="active teal m-item item m-mobile-hide"><i class="home icon"></i>帖子</a>
+            <a href="#" class="active blue m-item item m-mobile-hide"><i class="home icon"></i>帖子</a>
             <a href="#" class="m-item item m-mobile-hide"><i class="bookmark icon"></i>论坛</a>
             <a href="#" class="m-item item m-mobile-hide"><i class="th icon"></i>版块</a>
             <a href="#" class="m-item item m-mobile-hide"><i class="flag outline icon"></i>活动</a>
             <a href="#" class="m-item item m-mobile-hide"><i class="question circle icon"></i>个人信息</a>
             <div class="right m-item menu m-mobile-hide">
-                <div class="ui action left input item">
-                    <input type="text" placeholder="搜索帖子...">
-                    <div class="ui animated button fade">
-                        <div class="visible content">搜索</div>
-                        <div class="hidden content">
-                            <i class="search icon"></i>
-                        </div>
-                    </div>
+                <div class="ui icon input item">
+                    <input type="text" placeholder="搜索...">
+                    <i class="inverted circular search link icon" style="top: 1em;right: 1.5em;"></i>
                 </div>
-                <a href="#" id="model" class="item">登录</a>
+                <a href="#" id="model" class="item"><i class="sign-in icon"></i>登录</a>
             </div>
         </div>
     </div>
     <a href="#" class="ui menu toggle icon button m-right-top m-mobile-show">
         <i class="sidebar icon"></i>
     </a>
-</nav>
+</nav> 
 
 <!--登录注册-->
 <div class="ui modal" id="sign-in">
     <div class="ui container">
-        <img src="../static/images/qiku_community_logo.png" alt="" class="ui image" style="margin: 20px auto;">
+        <img src="../static/images/zyfourm.png" alt="" class="ui image" style="margin: 20px auto;">
     </div>
-
     <div class="ui pointing secondary menu">
         <a class="item active" data-tab="first">用户登录</a>
         <a class="item" data-tab="second">注册账号</a>
     </div>
     <i class="close icon"></i>
-    <div class="ui tab  active" data-tab="first" style="margin: 20px 20px;">
+    <div class="ui tab active" data-tab="first" style="margin: 20px;">
+        <div class="ui attached message">
+            <div class="header">
+                欢迎访问卓越论坛！
+            </div>
+            <p>通过登录获取更多功能</p>
+        </div>
         <form class="ui form attached segment fluid">
             <div class="field">
                 <label>账号</label>
-                <input placeholder="手机号/用户名/邮箱" type="text">
+                <input placeholder="用户名/邮箱" type="text">
             </div>
             <div class="field">
                 <label>密码</label>
@@ -71,21 +71,37 @@
             <div class="ui blue submit button">登录</div>
         </form>
     </div>
-    <div class="ui tab " data-tab="second" style="margin: 20px 20px;">
+    <div class="ui tab " data-tab="second" style="margin: 20px;">
         <div class="ui attached message">
             <div class="header">
-                欢迎访问某某论坛！
+                欢迎访问卓越论坛！
             </div>
             <p>注册一个新帐户</p>
         </div>
         <form class="ui form attached fluid segment" >
             <div class="field">
-                <label>账号</label>
-                <input placeholder="账号" type="text">
+                <label>邮箱</label>
+                <input placeholder="邮箱" type="email">
+            </div>
+            <div class="field">
+                <label>验证码</label>
+                <div class="fields">
+                    <div class="field">
+                        <input type="text" placeholder="验证码">
+                    </div>
+                    <div class="field">
+                        <button class="ui primary button">发送验证码</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="field">
+                <label>用户名</label>
+                <input placeholder="用户名" type="text">
             </div>
             <div class="field">
                 <label>密码</label>
-                <input type="password">
+                <input type="password" placeholder="密码">
             </div>
             <div class="inline field">
                 <div class="ui checkbox">
@@ -93,7 +109,7 @@
                     <label for="terms">同意服务条款</label>
                 </div>
             </div>
-            <div class="ui blue submit button">提交</div>
+            <div class="ui blue submit button">注册</div>
         </form>
     </div>
 </div>
@@ -120,167 +136,7 @@
                                 卓越人生，只为科技。欢迎来到我的个人博客。分享动漫混剪和实用又好玩的电脑教程。点击进入我的首页查看更多内容！卓越人生，只为科技。欢迎来到我的个人博客。分享动漫混剪和实用又好玩的电脑教程。点击进入我的首页查看更多内容！<a
                                     href="#"><i class="angle double right icon"></i>全文</a></p>
                             <div class="ui stackable grid">
-                                <div class="eleven wide column">
-                                    <div class="ui mini horizontal link list">
-                                        <div class="item">
-                                            <div class="content"><a href="#" class="header">360动态</a></div>
-                                        </div>
-                                        <div class="item">
-                                            <img src="../static/images/user.png" class="ui avatar image">
-                                            <div class="content"><a href="#" class="header">发帖人</a></div>
-                                        </div>
-                                        <div class="item">
-                                            <i class="calendar icon"></i> 2019-08-07
-                                        </div>
-                                        <div class="item">
-                                            <i class="eye icon"></i> 10W+
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="right aligned five wide column">
-                                    <a href="#" target="_blank"><i class="share icon"></i></a>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="ui padded vertical segment m-padded-tb-large m-mobile-lr-clear">
-                    <div class="ui mobile reversed stackable grid">
-                        <!--图片区域-->
-                        <div class="five wide column">
-                            <a href="#" target="_blank">
-                                <img src="../static/images/miku800x600.png" class="ui rounded image">
-                            </a>
-                        </div>
-                        <!--帖子内容-->
-                        <div class="eleven wide column">
-                            <h3 class="ui header">卓越科技的个人博客介绍</h3>
-                            <p class="m-text">
-                                卓越人生，只为科技。欢迎来到我的个人博客。分享动漫混剪和实用又好玩的电脑教程。点击进入我的首页查看更多内容！卓越人生，只为科技。欢迎来到我的个人博客。分享动漫混剪和实用又好玩的电脑教程。点击进入我的首页查看更多内容！<a
-                                    href="#"><i class="angle double right icon"></i>全文</a></p>
-                            <div class="ui stackable grid">
-                                <div class="eleven wide column">
-                                    <div class="ui mini horizontal link list">
-                                        <div class="item">
-                                            <div class="content"><a href="#" class="header">360动态</a></div>
-                                        </div>
-                                        <div class="item">
-                                            <img src="../static/images/user.png" class="ui avatar image">
-                                            <div class="content"><a href="#" class="header">发帖人</a></div>
-                                        </div>
-                                        <div class="item">
-                                            <i class="calendar icon"></i> 2019-08-07
-                                        </div>
-                                        <div class="item">
-                                            <i class="eye icon"></i> 10W+
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="right aligned five wide column">
-                                    <a href="#" target="_blank"><i class="share icon"></i></a>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="ui padded vertical segment m-padded-tb-large m-mobile-lr-clear">
-                    <div class="ui mobile reversed stackable grid">
-                        <!--图片区域-->
-                        <div class="five wide column">
-                            <a href="#" target="_blank">
-                                <img src="../static/images/miku800x600.png" class="ui rounded image">
-                            </a>
-                        </div>
-                        <!--帖子内容-->
-                        <div class="eleven wide column">
-                            <h3 class="ui header">卓越科技的个人博客介绍</h3>
-                            <p class="m-text">
-                                卓越人生，只为科技。欢迎来到我的个人博客。分享动漫混剪和实用又好玩的电脑教程。点击进入我的首页查看更多内容！卓越人生，只为科技。欢迎来到我的个人博客。分享动漫混剪和实用又好玩的电脑教程。点击进入我的首页查看更多内容！<a
-                                    href="#"><i class="angle double right icon"></i>全文</a></p>
-                            <div class="ui stackable grid">
-                                <div class="eleven wide column">
-                                    <div class="ui mini horizontal link list">
-                                        <div class="item">
-                                            <div class="content"><a href="#" class="header">360动态</a></div>
-                                        </div>
-                                        <div class="item">
-                                            <img src="../static/images/user.png" class="ui avatar image">
-                                            <div class="content"><a href="#" class="header">发帖人</a></div>
-                                        </div>
-                                        <div class="item">
-                                            <i class="calendar icon"></i> 2019-08-07
-                                        </div>
-                                        <div class="item">
-                                            <i class="eye icon"></i> 10W+
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="right aligned five wide column">
-                                    <a href="#" target="_blank"><i class="share icon"></i></a>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="ui padded vertical segment m-padded-tb-large m-mobile-lr-clear">
-                    <div class="ui mobile reversed stackable grid">
-                        <!--图片区域-->
-                        <div class="five wide column">
-                            <a href="#" target="_blank">
-                                <img src="../static/images/miku800x600.png" class="ui rounded image">
-                            </a>
-                        </div>
-                        <!--帖子内容-->
-                        <div class="eleven wide column">
-                            <h3 class="ui header">卓越科技的个人博客介绍</h3>
-                            <p class="m-text">
-                                卓越人生，只为科技。欢迎来到我的个人博客。分享动漫混剪和实用又好玩的电脑教程。点击进入我的首页查看更多内容！卓越人生，只为科技。欢迎来到我的个人博客。分享动漫混剪和实用又好玩的电脑教程。点击进入我的首页查看更多内容！<a
-                                    href="#"><i class="angle double right icon"></i>全文</a></p>
-                            <div class="ui stackable grid">
-                                <div class="eleven wide column">
-                                    <div class="ui mini horizontal link list">
-                                        <div class="item">
-                                            <div class="content"><a href="#" class="header">360动态</a></div>
-                                        </div>
-                                        <div class="item">
-                                            <img src="../static/images/user.png" class="ui avatar image">
-                                            <div class="content"><a href="#" class="header">发帖人</a></div>
-                                        </div>
-                                        <div class="item">
-                                            <i class="calendar icon"></i> 2019-08-07
-                                        </div>
-                                        <div class="item">
-                                            <i class="eye icon"></i> 10W+
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="right aligned five wide column">
-                                    <a href="#" target="_blank"><i class="share icon"></i></a>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="ui padded vertical segment m-padded-tb-large m-mobile-lr-clear">
-                    <div class="ui mobile reversed stackable grid">
-                        <!--图片区域-->
-                        <div class="five wide column">
-                            <a href="#" target="_blank">
-                                <img src="../static/images/miku800x600.png" class="ui rounded image">
-                            </a>
-                        </div>
-                        <!--帖子内容-->
-                        <div class="eleven wide column">
-                            <h3 class="ui header">卓越科技的个人博客介绍</h3>
-                            <p class="m-text">
-                                卓越人生，只为科技。欢迎来到我的个人博客。分享动漫混剪和实用又好玩的电脑教程。点击进入我的首页查看更多内容！卓越人生，只为科技。欢迎来到我的个人博客。分享动漫混剪和实用又好玩的电脑教程。点击进入我的首页查看更多内容！<a
-                                    href="#"><i class="angle double right icon"></i>全文</a></p>
-                            <div class="ui stackable grid">
-                                <div class="eleven wide column">
+                                <div class=" wide column">
                                     <div class="ui mini horizontal link list">
                                         <div class="item">
                                             <div class="content"><a href="#" class="header">360动态</a></div>
